@@ -9,6 +9,7 @@ import {
 import Main from './Components/Layout/Main';
 import Home from './Components/Home/Home';
 import OrderReview from './Components/OrderReview/OrderReview';
+import Tshirt from './Components/Tshirt/Tshirt';
 
 const router = createBrowserRouter([
   {
@@ -18,11 +19,15 @@ const router = createBrowserRouter([
       {
         path:'/',
         element: <Home></Home>,
-        loader: ()=> fetch('https://raw.githubusercontent.com/ProgrammingHero1/t-shirt-data/main/tshirt.json')
+        loader: ()=> fetch('tshart.json')
       },
       {
         path: 'review',
         element: <OrderReview></OrderReview>
+      },
+      {
+        path: 'about',
+        element: <Tshirt></Tshirt>
       }
     ]
   },
